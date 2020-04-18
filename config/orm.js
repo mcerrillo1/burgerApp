@@ -1,7 +1,7 @@
 const connection = require("../config/connection.js");
 
 var orm = {
-  all: (tableInput, cb) => {
+  selectAll: (tableInput, cb) => {
     const queryString = "SELECT * FROM ??";
     connection.query(queryString, [tableInput], (err, result) => {
       if (err) {
@@ -10,7 +10,7 @@ var orm = {
       cb(result);
     });
   },
-  create: (table, newRowData, cb) => {
+  insertOne: (table, newRowData, cb) => {
     const queryString = "INSERT INTO ?? SET ?";
     const values = [table, newRowData];
 
@@ -23,7 +23,7 @@ var orm = {
   },
 
 
-  update: (table, updateValues, condition, cb) => {
+  updateOne: (table, updateValues, condition, cb) => {
     const queryString = "UPDATE ?? SET ? WHERE ?";
     const values = [table, updateValues, condition];
 
