@@ -1,0 +1,26 @@
+{
+  "name": "burgerApp",
+  "version": "1.0.0",
+  "description": "App that utilizes ORM and MySQL in order to be able to add and delete burgers using handlebars",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mcerrillo1/burgerApp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mcerrillo1/burgerApp/issues"
+  },
+  "homepage": "https://github.com/mcerrillo1/burgerApp#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.3",
+    "mysql": "^2.18.1"
+  }
+}
